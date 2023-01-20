@@ -90,12 +90,13 @@ tabsButton.forEach(function(item) {
 });
 
 // menu burger
+const headerMedia = document.querySelector('.header-media');
 const iconMenu = document.querySelector('.menu__icon');
 if (iconMenu) {
     const menuBody = document.querySelector('.menu__body');
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock')
-        iconMenu.classList.toggle('_active');
+        headerMedia.classList.toggle('_active');
         menuBody.classList.toggle('_active');
     })
 }
@@ -117,6 +118,7 @@ new Swiper('.get-started__swiper',{
   
 
     
+  // direction: 'vertical',
   // Перетаскивание на ПК
   simulateTouch: true,
   
@@ -174,7 +176,7 @@ new Swiper('.get-started__swiper',{
 
 });
 
-
+// tabs 
 const tabsBtn   = document.querySelectorAll(".goods__tabs-nav-btn");
 const tabsItem = document.querySelectorAll(".goods__tabs-item");
 
@@ -202,7 +204,6 @@ function onTabClick(item) {
 }
 
 // products-swiper
-
 new Swiper('.products-slide__swiper',{
     pagination: {
       el: '.products-slide__pagination.swiper-pagination',
